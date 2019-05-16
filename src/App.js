@@ -5,7 +5,7 @@ import Login from 'components/Login';
 function App() {
   return (
     <Login>
-      1
+      <p>1</p>
     </Login>
   );
 }
