@@ -9,7 +9,7 @@ import rootEpic from './epics';
 
 
 export default function configureStore(initialState = {}, history) {
-  const epicMiddleware = createEpicMiddleware();
+  const epicMiddleware = createEpicMiddleware(rootEpic);
 
   const middleware = [
     thunk,
@@ -24,7 +24,6 @@ export default function configureStore(initialState = {}, history) {
     compose(applyMiddleware(...middleware))
   );
 
-  epicMiddleware.run(rootEpic);
 
   return store;
 }

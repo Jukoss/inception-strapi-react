@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router';
 import * as serviceWorker from './serviceWorker';
-import createBrowserHistory from 'history/createBrowserHistory';
+import { createBrowserHistory } from "history";
 
 
 import './index.scss';
