@@ -13,11 +13,10 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
-import TextField from './../UIKit/input';
-import Check from './../UIKit/checkbox';
+import TextField from './node_modules/components/UIKit/input';
+import Check from './node_modules/components/UIKit/checkbox';
 
-import { email, required } from './../../validation';
-
+import { email, required } from './node_modules/validation';
 
 const styles = theme => ({
   main: {
@@ -51,7 +50,7 @@ const styles = theme => ({
   },
 });
 
-const LoginForm = (props) => {
+const TestForm = (props) => {
   const {
     submitting, handleSubmit
   } = props;
@@ -66,7 +65,7 @@ const LoginForm = (props) => {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Log In
+          Test Log In
         </Typography>
         <form className={classes.form} onSubmit={handleSubmit}>
           <FormControl margin="normal" required fullWidth>
@@ -119,17 +118,17 @@ const LoginForm = (props) => {
   );
 };
 
-LoginForm.propTypes = {
+TestForm.propTypes = {
   submitting: PropTypes.bool.isRequired,
   handleSubmit: PropTypes.func.isRequired
 };
 
 const form = reduxForm({
-  form: 'LoginForm',
+  form: 'TestForm',
   initialValues: {
     remember: false
   }
-})(LoginForm);
+})(TestForm);
 
 export default withStyles(styles)(form);
 
