@@ -1,18 +1,15 @@
 import React from 'react';
-import './App.scss';
-import Login from 'components/Login';
+import { Switch, Route } from 'react-router-dom';
+import shortid from 'shortid';
 
-import TestForm from './testForm';
+import routes from './routes';
 
-const url = 'http://18.219.0.22:1337/auth/local';
-
-function App() {
-  return (
-    <Login
-      Forms={TestForm}
-      loginDomain={url}
-    />
-  );
-}
+const App = () => (
+  <Switch>
+    {routes.map((route) => (
+      <Route key={shortid.generate()} {...route} />
+    ))}
+  </Switch>
+);
 
 export default App;

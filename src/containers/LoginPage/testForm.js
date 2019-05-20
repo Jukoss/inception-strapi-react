@@ -13,10 +13,10 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
-import TextField from './node_modules/components/UIKit/input';
-import Check from './node_modules/components/UIKit/checkbox';
+import TextField from '../../node_modules/components/UIKit/input';
+import Check from '../../node_modules/components/UIKit/checkbox';
 
-import { email, required } from './node_modules/validation';
+import { email, required } from '../../node_modules/validation';
 
 const styles = theme => ({
   main: {
