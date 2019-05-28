@@ -1,6 +1,7 @@
 
 import LoginPage from './containers/LoginPage';
 import HomePage from './containers/HomePage';
+import SignUpPage from './containers/SignUpPage';
 
 import Inception from './node_modules/components/Inception';
 
@@ -16,6 +17,11 @@ const routes = [
     path: '/',
     exact: true,
     component: Inception(HomePage)
+  },
+  {
+    path: '/signup',
+    exact: true,
+    component: Inception(SignUpPage)
   }
 ];
 
